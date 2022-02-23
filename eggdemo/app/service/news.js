@@ -25,6 +25,10 @@ const Service = require('egg').Service;
 * */
 class NewsService extends Service {
   async getNewsList() {
+    // 获取config的数据
+    console.log('news', this.config.api);
+
+
     // 获取新闻数据
     const list = [ '111111', '222222', '3333' ];
     const mag = '132456';
@@ -33,7 +37,7 @@ class NewsService extends Service {
 
     const user = await this.service.user.getUserInfo();
 
-    console.log("获取数据",user);
+    console.log('获取数据', user);
 
     return mag;
 

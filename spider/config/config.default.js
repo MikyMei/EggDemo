@@ -13,7 +13,7 @@ module.exports = appInfo => {
   const config = exports = {};
 
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1633765426904_9988';
+  config.keys = appInfo.name + '_1645604114152_869';
 
   // add your middleware config here
   config.middleware = [];
@@ -22,16 +22,6 @@ module.exports = appInfo => {
   const userConfig = {
     // myAppName: 'egg',
   };
-
-  // 配置模板引擎
-  exports.view = {
-    mapping: {
-      '.html': 'ejs',  // 模板文件后缀名，用ejs来解析
-    },
-  };
-
-  config.api = 'http://www.itying.com/api';
-  // config.api = 'http://localhost/555';
 
   return {
     ...config,

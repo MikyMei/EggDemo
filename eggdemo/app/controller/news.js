@@ -22,7 +22,10 @@ class NewsController extends Controller {
     const list = [ '111111', '22222222222', '33333333' ];
     await ctx.render('news', {
       mag: msg,
-      list,
+      user: {
+        name: '王二',
+        age: 5555,
+      },
     });
   }
 
@@ -39,8 +42,13 @@ class NewsController extends Controller {
     // 获取动态路由
     const { ctx } = this;
     const query = ctx.params;
-    console.log(query);
+    console.log('IP地址参数', query);
     ctx.body = '新闻列表';
+  }
+
+
+  async newList() {
+    this.ctx.body = '新闻列表(动态路由)';
   }
 
 }

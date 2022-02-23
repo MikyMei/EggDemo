@@ -19,8 +19,8 @@ class UserService extends Service {
 
 
     return {
-      name:"治丧三",
-      age:20,
+      name: '治丧三',
+      age: 20,
     };
 
   }
