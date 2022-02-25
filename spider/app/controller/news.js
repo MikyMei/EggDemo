@@ -15,10 +15,20 @@ class NewsController extends Controller {
 
     // 获取数据显示到新闻页面
 
+    const userinfo = this.ctx.cookies.get('username', {
+      encrypt: true,
+    });
+    console.log('pppp', userinfo);
+
     const list = await this.service.news.getNewsList();
 
+    const username = this.ctx.session.username;
+
+    // this.ctx.session.maxAge = 1000;
+
     await this.ctx.render('news', {
-      list: list,
+      userinfo: userinfo,
+      username: username,
     });
   }
 

@@ -16,12 +16,23 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1645604114152_869';
 
   // add your middleware config here
-  config.middleware = [ 'printdate', 'forbidip' ];
+  config.middleware = [ 'printdate', 'forbidip', 'auth' ];
   config.printdate = {
     aaa: 'aaaaa',
   };
   config.forbidip = {
-    forbidips: [ '127.0.0.1' ],
+    forbidips: [],
+  };
+
+
+  // 与cookie的配置基本一样
+  config.session = {
+    maxAge: 5000,
+    key: 'SESSION_ID',
+    // httpOnly: true,
+    encrypt: true,
+    renew: true,
+
   };
 
 
