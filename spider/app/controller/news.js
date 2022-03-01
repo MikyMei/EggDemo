@@ -13,12 +13,15 @@ const Controller = require('egg').Controller;
 class NewsController extends Controller {
   async index() {
 
+    /**
+     * 在这里调用service中获得数据库的方法
+     * */
+
     // 获取数据显示到新闻页面
 
     const userinfo = this.ctx.cookies.get('username', {
       encrypt: true,
     });
-    console.log('pppp', userinfo);
 
     const list = await this.service.news.getNewsList();
 

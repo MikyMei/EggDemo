@@ -43,6 +43,12 @@ class NewsService extends Service {
 
   }
 
+  /**
+   * 测试操作数据库
+   * */
+
+
+
 }
 
 module.exports = NewsService;
