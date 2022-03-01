@@ -27,7 +27,7 @@ module.exports = appInfo => {
 
   // 与cookie的配置基本一样
   config.session = {
-    maxAge: 5000,
+    // maxAge: 5000,
     key: 'SESSION_ID',
     // httpOnly: true,
     encrypt: true,
