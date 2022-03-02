@@ -10,4 +10,5 @@ module.exports = app => {
   router.get('/news', controller.news.index);
   router.get('/loginOut', controller.home.loginOut);
   router.get('/newscontent', controller.news.content);
+  router.resources('user2', '/user2', controller.user2);
 };

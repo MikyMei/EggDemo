@@ -14,7 +14,9 @@ const Service = require('egg').Service;
 class NewsService extends Service {
   async getNewsList() {
 
-
+    //
+    // const user = await  this.app.mysql.get('aaa', { id: 1 });
+    // console.log(user);
     // 通过抓取接口返回数据
     // curl的方法可以获得远程的数据
 
@@ -46,7 +48,6 @@ class NewsService extends Service {
   /**
    * 测试操作数据库
    * */
-
 
 
 }

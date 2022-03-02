@@ -24,6 +24,42 @@ module.exports = appInfo => {
     forbidips: [],
   };
 
+  exports.mysql = {
+    // 单数据库信息配置
+    client: {
+      // host
+      host: '127.0.0.1',
+      // 端口号
+      port: '3306',
+      // 用户名
+      user: 'root',
+      // 密码
+      password: '123456',
+      // 数据库名
+      database: 'spiderdemo',
+      debug: true,
+    },
+    // 是否加载到 app 上，默认开启
+    app: true,
+    // 是否加载到 agent 上，默认关闭
+    agent: false,
+  };
+  // exports.sequelize = {
+  //   dialect: 'mysql',
+  //   host: '127.0.0.1',
+  //   port: 3306,
+  //   database: 'spiderdemo',
+  //   username: 'root',
+  //   password: '123456',
+  //   define: {
+  //     // freezeTableName默认值为false，会自动在表名后加s
+  //     freezeTableName: true,
+  //     // timestamps默认值为true，会自动添加create_time和update_time
+  //     timestamps: false,
+  //   },
+  //   app: true,
+  // };
+
 
   // 与cookie的配置基本一样
   config.session = {
@@ -33,6 +69,12 @@ module.exports = appInfo => {
     encrypt: true,
     renew: true,
 
+  };
+
+  config.security = {
+    csrf: {
+      enable: false,
+    }
   };
 
 
