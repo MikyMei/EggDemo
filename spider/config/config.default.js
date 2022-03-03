@@ -37,28 +37,21 @@ module.exports = appInfo => {
       password: '123456',
       // 数据库名
       database: 'spiderdemo',
-      debug: true,
+      // debug: true,
     },
     // 是否加载到 app 上，默认开启
     app: true,
     // 是否加载到 agent 上，默认关闭
     agent: false,
   };
-  // exports.sequelize = {
-  //   dialect: 'mysql',
-  //   host: '127.0.0.1',
-  //   port: 3306,
-  //   database: 'spiderdemo',
-  //   username: 'root',
-  //   password: '123456',
-  //   define: {
-  //     // freezeTableName默认值为false，会自动在表名后加s
-  //     freezeTableName: true,
-  //     // timestamps默认值为true，会自动添加create_time和update_time
-  //     timestamps: false,
-  //   },
-  //   app: true,
-  // };
+  exports.mongoose = {
+    client: {
+      url: 'mongodb://127.0.0.1:exports/eggDemo',
+      options: {
+        useUnifiedTopology: true,
+      },
+    },
+  };
 
 
   // 与cookie的配置基本一样
@@ -74,8 +67,9 @@ module.exports = appInfo => {
   config.security = {
     csrf: {
       enable: false,
-    }
-  };
+    },
+  }
+  ;
 
 
   // add your user config here

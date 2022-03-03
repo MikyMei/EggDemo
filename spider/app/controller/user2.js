@@ -39,12 +39,15 @@ class User2Controller extends Controller {
 
 
     const data = ctx.request.body;
-    console.log(ctx.request.body);
+
+
+    const result = await this.service.spiderEgg.delete(data);
+
 
     // const res = await app.mysql.get('users');
     // const res = await app.mysql.count('users', { age: 150 });
-    const res = await app.mysql.query('INSERT INTO users (name, age) VALUES(?, ?)', [ data.name, data.age ]);
-    ctx.body = res;
+    // const res = await app.mysql.query('INSERT INTO users (name, age) VALUES(?, ?)', [ data.name, data.age ]);
+    ctx.body = result;
   }
 
 
