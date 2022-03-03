@@ -41,7 +41,7 @@ class User2Controller extends Controller {
     const data = ctx.request.body;
 
 
-    const result = await this.service.spiderEgg.delete(data);
+    const result = await this.service.spiderEgg.insert(data);
 
 
     // const res = await app.mysql.get('users');

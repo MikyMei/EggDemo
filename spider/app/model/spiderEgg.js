@@ -21,6 +21,6 @@ module.exports = app => {
       type: Number,
       required: false,
     },
-  });
+  }, { versionKey: false });
   return mongoose.model('spiderEgg', PostSchema);
 };
