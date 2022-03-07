@@ -17,7 +17,7 @@ class NewsController extends Controller {
     const { ctx } = this;
 
 
-    console.log(this.config.api);
+
     const msg = 'ejs';
     const list = [ '111111', '22222222222', '33333333' ];
     await ctx.render('news', {

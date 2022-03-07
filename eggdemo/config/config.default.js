@@ -30,6 +30,22 @@ module.exports = appInfo => {
     },
   };
 
+
+  config.sequelize = {
+    dialect: 'mysql',
+    host: '127.0.0.1',
+    port: 3306,
+    database: 'spiderdemo',
+    username: 'root',
+    password: '123456',
+    debug: true,
+  };
+
+  config.passportLocal = {
+    usernameField: 'MikyMei##',
+    passwordField: '68c532399b770851de1e4c317c4d0ac6',
+  };
+
   config.api = 'http://www.itying.com/api';
   // config.api = 'http://localhost/555';
 
