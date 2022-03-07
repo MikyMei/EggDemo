@@ -39,6 +39,7 @@ class User2Controller extends Controller {
 
 
     const data = ctx.request.body;
+    console.log('data', data);
 
 
     const result = await this.service.spiderEgg.insert(data);

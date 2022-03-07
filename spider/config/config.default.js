@@ -53,6 +53,13 @@ module.exports = appInfo => {
     },
   };
 
+  exports.passportGithub = {
+    key: '299b7908e05dbc928091',
+    secret: '42cf5bf0cd6e8c3664e2271a31c5f441635efd7f',
+    // callbackURL: '/passport/github/callback',
+    // proxy: false,
+  };
+
 
   // 与cookie的配置基本一样
   config.session = {
