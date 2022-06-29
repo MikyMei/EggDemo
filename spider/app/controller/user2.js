@@ -76,7 +76,7 @@ class User2Controller extends Controller {
     const opts = {
       where: {
         age: 24,
-      }
+      },
     };
     const row = {
       // id: ctx.params.id,

@@ -21,6 +21,12 @@ module.exports = {
 
   },
 
+  // 有效时间为30分钟
+  getToken (options) {
+    return this.app.jwt.sign(options, this.app.config.jwt.secret, { expiresIn: '1800s' });
+  },
+
+
   getHelperDate() {
 
     return '我是helper里面的数据';

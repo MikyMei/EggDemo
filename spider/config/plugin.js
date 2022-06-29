@@ -48,3 +48,4 @@ exports.passportLocal = {
   package: 'egg-passport-local',
 };
 
+
